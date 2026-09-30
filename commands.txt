@@ -1,0 +1,3 @@
+CMD: echo it works! && pause
+POW: echo it works! && pause
+BAT: @echo off <NEWLINE> title think it works <NEWLINE> echo it works! <NEWLINE> pause <NEWLINE> exit /b 0
